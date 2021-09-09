@@ -144,9 +144,9 @@ export default function Home({ services }) {
 								<h3 className="title text-center">Jasa Kami</h3>
 							</Row>
 							<Row>
-								{services.map((jasa) => (
+								{/* {services.map((jasa) => (
 									<OurProducts key={jasa.id} service={jasa} />
-								))}
+								))} */}
 							</Row>
 						</Container>
 					</div>
