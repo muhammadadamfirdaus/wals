@@ -1,0 +1,36 @@
+.featuredImage {
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+	&:before {
+		content: "";
+		background: rgba($color: #000000, $alpha: 0.5);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	& img {
+		width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		top: -9999px;
+		bottom: -9999px;
+		left: -9999px;
+		right: -9999px;
+		margin: auto;
+	}
+
+	& .title {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+}

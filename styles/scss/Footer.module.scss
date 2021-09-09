@@ -1,0 +1,21 @@
+.footer {
+	background: #000;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	& > .container {
+		padding: 4rem 0 6rem;
+	}
+	& .title,
+	& p {
+		font-size: 0.875rem;
+	}
+
+	& .title {
+		color: #fff;
+	}
+	& p,
+	& a {
+		color: #a8a8a8;
+	}
+}
