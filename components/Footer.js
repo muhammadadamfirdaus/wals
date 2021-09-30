@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import ServiceContext from "../context/ServiceContext";
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/scss/Footer.module.scss";
 
 export default function Footer() {
+	const { products } = useContext(ServiceContext);
 	return (
 		<div className={styles.footer}>
 			<Container className={styles.container}>
@@ -16,22 +19,20 @@ export default function Footer() {
 					<Col>
 						<h2 className={styles.title}>Produk</h2>
 						<ul>
-							{/* {service.map((x) => (
-								<li key={x.id}>
-									<Link href={`/products/${x.slug}`}>
-										<a>{x.title}</a>
-									</Link>
-								</li>
-							))} */}
-							<li>
-								<a>Produk 1</a>
-							</li>
-							<li>
-								<a>Produk 2</a>
-							</li>
-							<li>
-								<a>Produk 3</a>
-							</li>
+							{products.map((x) => {
+								// limit title by 3 words
+								let title = x.title;
+								if (title) {
+									title = title.split(" ").splice(0, 3).join(" ");
+								}
+								return (
+									<li key={x.id}>
+										<Link href={`/products/${x.slug}`}>
+											<a>{title}</a>
+										</Link>
+									</li>
+								);
+							})}
 						</ul>
 					</Col>
 					<Col>
