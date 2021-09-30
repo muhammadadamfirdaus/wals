@@ -60,10 +60,10 @@ export default function Header() {
 									<Dropdown.Toggle as={NavLink}>Produk</Dropdown.Toggle>
 									<Dropdown.Menu>
 										{products.map((menu) => {
-											// limit title
+											// limit title by 3 words
 											let title = menu.title;
-											if (title.length > 120) {
-												title = title.substring(0, 120);
+											if (title) {
+												title = title.split(" ").splice(0, 3).join(" ");
 											}
 											return (
 												<Link
