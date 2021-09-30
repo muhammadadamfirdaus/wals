@@ -1,23 +1,24 @@
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import OurProducts from "../components/OurProducts";
+import { useContext } from "react";
+import ServiceContext from "../context/ServiceContext";
 import Link from "next/link";
 import Image from "next/image";
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import OurProducts from "../components/OurProducts";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { API_URL } from "../config";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-export default function Home({ services }) {
+export default function Home() {
+	const { products } = useContext(ServiceContext);
+	// console.log(products);
 	return (
 		<Layout>
-			<Header />
 			<div className="content">
 				<div className="wrapper">
 					<Swiper
@@ -37,106 +38,11 @@ export default function Home({ services }) {
 					>
 						<div className="swiper-button-next swiper-button-white"></div>
 						<div className="swiper-button-prev swiper-button-white"></div>
-						<SwiperSlide>
-							<div className="content">
-								<div className="wrapper">
-									<figure>
-										<Image src="/images/headline.jpg" layout="fill" alt="" />
-									</figure>
-									<div className="caption">
-										<h1 className="title">Konsultan Survey dan Pemetaan</h1>
-										<p>
-											Konsultan Survey Pemetaan adalah sebuah perusahaan
-											konsultan manajemen dengan fokus pada kemewahan dan
-											keindahan. Kami bekerja dengan perspektif operasi
-											strategis jangka panjang untuk menempatkan merek klien
-											kami di atas.
-										</p>
-										<Button
-											variant="primary"
-											className="button align-item-center align-self-center"
-										>
-											<Link href={`/contacts`}>Hubungi Kami</Link>
-										</Button>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className="content">
-								<div className="wrapper">
-									<figure>
-										<Image src="/images/headline.jpg" layout="fill" alt="" />
-									</figure>
-									<div className="caption">
-										<h1 className="title">Konsultan Survey dan Pemetaan</h1>
-										<p>
-											Konsultan Survey Pemetaan adalah sebuah perusahaan
-											konsultan manajemen dengan fokus pada kemewahan dan
-											keindahan. Kami bekerja dengan perspektif operasi
-											strategis jangka panjang untuk menempatkan merek klien
-											kami di atas.
-										</p>
-										<Button
-											variant="primary"
-											className="button align-item-center align-self-center"
-										>
-											<Link href={`/contacts`}>Hubungi Kami</Link>
-										</Button>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className="content">
-								<div className="wrapper">
-									<figure>
-										<Image src="/images/headline.jpg" layout="fill" alt="" />
-									</figure>
-									<div className="caption">
-										<h1 className="title">Konsultan Survey dan Pemetaan</h1>
-										<p>
-											Konsultan Survey Pemetaan adalah sebuah perusahaan
-											konsultan manajemen dengan fokus pada kemewahan dan
-											keindahan. Kami bekerja dengan perspektif operasi
-											strategis jangka panjang untuk menempatkan merek klien
-											kami di atas.
-										</p>
-										<Button
-											variant="primary"
-											className="button align-item-center align-self-center"
-										>
-											<Link href={`/contacts`}>Hubungi Kami</Link>
-										</Button>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className="content">
-								<div className="wrapper">
-									<figure>
-										<Image src="/images/headline.jpg" layout="fill" alt="" />
-									</figure>
-									<div className="caption">
-										<h1 className="title">Konsultan Survey dan Pemetaan</h1>
-										<p>
-											Konsultan Survey Pemetaan adalah sebuah perusahaan
-											konsultan manajemen dengan fokus pada kemewahan dan
-											keindahan. Kami bekerja dengan perspektif operasi
-											strategis jangka panjang untuk menempatkan merek klien
-											kami di atas.
-										</p>
-										<Button
-											variant="primary"
-											className="button align-item-center align-self-center"
-										>
-											<Link href={`/contacts`}>Hubungi Kami</Link>
-										</Button>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
+						{products.map((slide) => (
+							<SwiperSlide key={slide.id}>
+								<Hero service={slide} />
+							</SwiperSlide>
+						))}
 					</Swiper>
 					<div className="services">
 						<Container fluid="lg" className="py-5">
@@ -144,9 +50,7 @@ export default function Home({ services }) {
 								<h3 className="title text-center">Jasa Kami</h3>
 							</Row>
 							<Row>
-								{services.map((jasa) => (
-									<OurProducts key={jasa.id} service={jasa} />
-								))}
+								<OurProducts />
 							</Row>
 						</Container>
 					</div>
@@ -154,9 +58,11 @@ export default function Home({ services }) {
 						<Container className="py-5">
 							<Row>
 								<Col>
-									<div className="circle">
-										<span>270</span>
-									</div>
+									<Link href={`/products`}>
+										<div className="circle">
+											<span>270</span>
+										</div>
+									</Link>
 									<span>Proyek</span>
 								</Col>
 								<Col>
@@ -328,25 +234,6 @@ export default function Home({ services }) {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</Layout>
 	);
-}
-
-// jasa kami
-export async function getStaticProps() {
-	const res = await fetch(`${API_URL}/api/products`, {
-		headers: {
-			// update with your user-agent
-			"User-Agent":
-				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
-			Accept: "application/json; charset=UTF-8",
-		},
-	});
-	const services = await res.json();
-
-	return {
-		props: { services },
-		revalidate: 1,
-	};
 }

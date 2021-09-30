@@ -1,14 +1,11 @@
 import Image from "next/image";
 import { Container, Row } from "react-bootstrap";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import Layout from "../../components/Layout";
 
 export default function Contact() {
 	return (
 		<Layout title="Hubungi Kami">
-			<Header />
 			<div className="content">
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
@@ -27,8 +24,6 @@ export default function Contact() {
 					</Container>
 				</div>
 			</div>
-			<Footer />
-			<Footer />
 		</Layout>
 	);
 }

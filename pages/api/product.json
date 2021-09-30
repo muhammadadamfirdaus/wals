@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"title": "Survey Pemetaan Wilayah Mencoba Judul yang Agak Panjangan Dikit",
-			"slug": "survey-pemetaan-wilayah",
+			"slug": "jasa-survey",
 			"category": "survey",
 			"description": "Pemetaan Wilayah adalah tahap ketiga dalam konsep pembagian administrasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et libero tempus, pellentesque eros et, tristique dui. Nullam a nisi vel nunc venenatis feugiat. Mauris non leo auctor, pharetra ante id, aliquet erat. Morbi non lobortis tortor, sit amet maximus quam. Phasellus nisi leo, luctus quis rutrum efficitur, varius eu nunc. Cras bibendum sem quam, ac imperdiet enim dignissim ut. Morbi venenatis metus vitae orci auctor consequat. Vivamus lobortis sit amet velit nec imperdiet. Fusce et maximus diam. Nam euismod imperdiet sem in fringilla. Sed gravida lectus turpis, eget efficitur justo luctus in. Vivamus vel metus ac dui aliquet laoreet quis vitae tellus. Curabitur venenatis est sem, vitae ornare metus sollicitudin non. Wilayah adalah tahap ketiga dalam konsep pembagian administrasi. ",
 			"image": "/images/1.jpg"
@@ -11,15 +11,15 @@
 		{
 			"id": 2,
 			"title": "Pemetaan Pertambangan",
-			"slug": "pemetaan-pertambangan",
-			"category": "pemetaan",
+			"slug": "jasa-training",
+			"category": "training",
 			"description": "Pemetaan Wilayah adalah tahap ketiga dalam konsep pembagian administrasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et libero tempus, pellentesque eros et, tristique dui. Nullam a nisi vel nunc venenatis feugiat. Mauris non leo auctor, pharetra ante id, aliquet erat. Morbi non lobortis tortor, sit amet maximus quam. Phasellus nisi leo, luctus quis rutrum efficitur, varius eu nunc. Cras bibendum sem quam, ac imperdiet enim dignissim ut. Morbi venenatis metus vitae orci auctor consequat. Vivamus lobortis sit amet velit nec imperdiet. Fusce et maximus diam. Nam euismod imperdiet sem in fringilla. Sed gravida lectus turpis, eget efficitur justo luctus in. Vivamus vel metus ac dui aliquet laoreet quis vitae tellus. Curabitur venenatis est sem, vitae ornare metus sollicitudin non.",
 			"image": "/images/2.jpg"
 		},
 		{
 			"id": 3,
 			"title": "Survey Pemetaan Konstruksi",
-			"slug": "survey-pemetaan-konstruksi",
+			"slug": "catalog-penjualan",
 			"category": "survey",
 			"description": "Pemetaan Wilayah adalah tahap ketiga dalam konsep pembagian administrasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et libero tempus, pellentesque eros et, tristique dui. Nullam a nisi vel nunc venenatis feugiat. Mauris non leo auctor, pharetra ante id, aliquet erat. Morbi non lobortis tortor, sit amet maximus quam. Phasellus nisi leo, luctus quis rutrum efficitur, varius eu nunc. Cras bibendum sem quam, ac imperdiet enim dignissim ut. Morbi venenatis metus vitae orci auctor consequat. Vivamus lobortis sit amet velit nec imperdiet. Fusce et maximus diam. Nam euismod imperdiet sem in fringilla. Sed gravida lectus turpis, eget efficitur justo luctus in. Vivamus vel metus ac dui aliquet laoreet quis vitae tellus. Curabitur venenatis est sem, vitae ornare metus sollicitudin non.",
 			"image": "/images/3.jpg"

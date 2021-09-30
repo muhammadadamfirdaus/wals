@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import ServiceContext from "../context/ServiceContext";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/scss/Header.module.scss";
@@ -15,6 +17,7 @@ import {
 } from "react-bootstrap";
 
 export default function Header() {
+	const { products } = useContext(ServiceContext);
 	return (
 		<header>
 			<div className={styles.top}></div>
@@ -56,15 +59,22 @@ export default function Header() {
 								<Dropdown as={NavItem} id="collasible-nav-dropdown">
 									<Dropdown.Toggle as={NavLink}>Produk</Dropdown.Toggle>
 									<Dropdown.Menu>
-										<Link href="/products/survey-pemetaan-wilayah" passHref>
-											<Dropdown.Item>Survey Pemetaan Wilayah</Dropdown.Item>
-										</Link>
-										<Link href="/products/pemetaan-pertambangan" passHref>
-											<Dropdown.Item>Pemetaan Pertambangan</Dropdown.Item>
-										</Link>
-										<Link href="/products/survey-pemetaan-konstruksi" passHref>
-											<Dropdown.Item>Survey Pemetaan Konstruksi</Dropdown.Item>
-										</Link>
+										{products.map((menu) => {
+											// limit title
+											let title = menu.title;
+											if (title.length > 120) {
+												title = title.substring(0, 120);
+											}
+											return (
+												<Link
+													href={`/products/${menu.slug}`}
+													passHref
+													key={menu.id}
+												>
+													<Dropdown.Item>{title}</Dropdown.Item>
+												</Link>
+											);
+										})}
 									</Dropdown.Menu>
 								</Dropdown>
 								<Link href="/contacts" passHref>

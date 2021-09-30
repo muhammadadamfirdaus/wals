@@ -1,15 +1,11 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Layout from "../../components/Layout";
 import { Accordion, Container, Row } from "react-bootstrap";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Layout from "../../components/Layout";
 
 export default function About() {
 	return (
 		<Layout title="Sekilas tentang PT WALS">
-			<Header />
 			<div className="content">
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
@@ -106,7 +102,6 @@ export default function About() {
 					</Container>
 				</div>
 			</div>
-			<Footer />
 		</Layout>
 	);
 }

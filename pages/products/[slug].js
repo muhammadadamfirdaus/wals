@@ -1,16 +1,13 @@
-import styles from "../../styles/scss/FeaturedImage.module.scss";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Layout from "../../components/Layout";
 import { API_URL } from "../../config";
 import Image from "next/image";
+import Layout from "../../components/Layout";
+import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Container, Row } from "react-bootstrap";
 
 function Product({ service }) {
 	console.log(service);
 	return (
 		<Layout>
-			<Header />
 			<div className="content">
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
@@ -32,7 +29,6 @@ function Product({ service }) {
 					</Container>
 				</div>
 			</div>
-			<Footer />
 		</Layout>
 	);
 }
