@@ -15,6 +15,7 @@ import {
 	NavLink,
 	Row,
 } from "react-bootstrap";
+import Menu from "./Menu";
 
 export default function Header() {
 	const { products } = useContext(ServiceContext);
@@ -32,7 +33,7 @@ export default function Header() {
 					</Col>
 					<Col className="d-flex align-items-center justify-content-center">
 						<div>
-							<span>Survey &amp; Engineering</span>
+							<span>Survey &amp; Engineering Services</span>
 						</div>
 					</Col>
 				</Row>
@@ -49,38 +50,7 @@ export default function Header() {
 							id="basic-navbar-nav"
 							className="justify-content-center"
 						>
-							<Nav>
-								<Link href="/" passHref>
-									<Nav.Link>Home</Nav.Link>
-								</Link>
-								<Link href="/about" passHref>
-									<Nav.Link>Tentang Kami</Nav.Link>
-								</Link>
-								<Dropdown as={NavItem} id="collasible-nav-dropdown">
-									<Dropdown.Toggle as={NavLink}>Produk</Dropdown.Toggle>
-									<Dropdown.Menu>
-										{products.map((menu) => {
-											// limit title by 3 words
-											let title = menu.title;
-											if (title) {
-												title = title.split(" ").splice(0, 3).join(" ");
-											}
-											return (
-												<Link
-													href={`/products/${menu.slug}`}
-													passHref
-													key={menu.id}
-												>
-													<Dropdown.Item>{title}</Dropdown.Item>
-												</Link>
-											);
-										})}
-									</Dropdown.Menu>
-								</Dropdown>
-								<Link href="/contacts" passHref>
-									<Nav.Link>Kontak</Nav.Link>
-								</Link>
-							</Nav>
+							<Menu />
 						</Navbar.Collapse>
 					</Navbar>
 				</Row>
