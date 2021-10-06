@@ -19,13 +19,13 @@ export default function Menu() {
 				{menu.map((i) => {
 					console.log(i);
 					return (
-						<Nav.Item>
+						<Nav.Item key={i.id}>
 							{i.menu ? (
 								<Dropdown as={NavItem} id="collasible-nav-dropdown">
 									<Dropdown.Toggle as={NavLink}>{i.title}</Dropdown.Toggle>
 									<Dropdown.Menu>
 										{i.menu.map((x) => (
-											<Dropdown.Item>
+											<Dropdown.Item key={x.id}>
 												<Link href={`/${x.slug}`}>{x.title}</Link>
 											</Dropdown.Item>
 										))}
