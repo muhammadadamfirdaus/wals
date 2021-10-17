@@ -6,9 +6,9 @@ import { Button, Card, Col } from "react-bootstrap";
 
 import styles from "../styles/scss/Card.module.scss";
 
-export default function OurProducts() {
-	const { products } = useContext(ServiceContext);
-	return products.map((service) => {
+export default function OurServices() {
+	const { services } = useContext(ServiceContext);
+	return services.map((service) => {
 		// limit description
 		let description = service.description;
 		if (description.length > 120) {

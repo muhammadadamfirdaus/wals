@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import { Container, Row } from "react-bootstrap";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 
-export default function Products() {
+export default function Services() {
 	return (
 		<Layout title="Jasa PT WALS.">
 			<div className="content">

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
-import OurProducts from "../components/OurProducts";
+import OurServices from "../components/OurServices";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -15,8 +15,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default function Home() {
-	const { products } = useContext(ServiceContext);
-	// console.log(products);
+	const { services } = useContext(ServiceContext);
+	// console.log(services);
 	return (
 		<Layout>
 			<div className="content">
@@ -38,7 +38,7 @@ export default function Home() {
 					>
 						<div className="swiper-button-next swiper-button-white"></div>
 						<div className="swiper-button-prev swiper-button-white"></div>
-						{products.map((slide) => (
+						{services.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<Hero service={slide} />
 							</SwiperSlide>
@@ -50,7 +50,7 @@ export default function Home() {
 								<h3 className="title text-center">Jasa Kami</h3>
 							</Row>
 							<Row>
-								<OurProducts />
+								<OurServices />
 							</Row>
 						</Container>
 					</div>

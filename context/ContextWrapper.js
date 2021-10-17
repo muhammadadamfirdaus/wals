@@ -3,10 +3,10 @@ import ServiceContext from "./ServiceContext";
 
 export default function ContextWrapper({ children, services }) {
 	// let services = services;
-	const [products] = useState(services);
+	useState(services);
 
 	return (
-		<ServiceContext.Provider value={{ products }}>
+		<ServiceContext.Provider value={{ services }}>
 			{children}
 		</ServiceContext.Provider>
 	);

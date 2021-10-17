@@ -6,7 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "../styles/scss/Footer.module.scss";
 
 export default function Footer() {
-	const { products } = useContext(ServiceContext);
+	const { services } = useContext(ServiceContext);
 	return (
 		<div className={styles.footer}>
 			<Container className={styles.container}>
@@ -19,7 +19,7 @@ export default function Footer() {
 					<Col>
 						<h2 className={styles.title}>Produk</h2>
 						<ul>
-							{products.map((x) => {
+							{services.map((x) => {
 								// limit title by 3 words
 								let title = x.title;
 								if (title) {

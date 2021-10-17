@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, services }) {
 
 // jasa kami
 MyApp.getInitialProps = async () => {
-	const res = await fetch(`${API_URL}/api/products`, {
+	const res = await fetch(`${API_URL}/api/services`, {
 		headers: {
 			// update with your user-agent
 			"User-Agent":
