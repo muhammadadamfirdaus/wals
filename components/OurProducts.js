@@ -6,35 +6,35 @@ import { Button, Card, Col } from "react-bootstrap";
 
 import styles from "../styles/scss/Card.module.scss";
 
-export default function OurServices() {
-	const { services } = useContext(ServiceContext);
-	return services.map((service) => {
+export default function OurProducts() {
+	const { products } = useContext(ServiceContext);
+	return products.map((product) => {
 		// limit description
-		let description = service.description;
+		let description = product.description;
 		if (description.length > 120) {
 			description = description.substring(0, 120);
 		}
 		return (
-			<Col className="col-md-offset-4" key={service.id}>
+			<Col className="col-md-offset-4" key={product.id}>
 				<Card className={styles.card}>
 					<div className={styles.thumbnail}>
 						<Image
-							src={service.image}
+							src={product.image}
 							layout="fill"
 							objectFit="cover"
-							alt={service.description}
+							alt={product.description}
 						/>
 					</div>
 					<Card.Body className="d-flex flex-column">
 						<Card.Title className={styles.title}>
-							<Link href={`/services/${service.slug}`}>{service.title}</Link>
+							<Link href={`/products/${product.slug}`}>{product.title}</Link>
 						</Card.Title>
 						<Card.Text className={styles.description}>{description}</Card.Text>
 						<Button
 							variant="primary"
 							className="button align-item-center align-self-center"
 						>
-							<Link href={`/services/${service.slug}`}>Selengkapnya</Link>
+							<Link href={`/products/${product.slug}`}>Selengkapnya</Link>
 						</Button>
 					</Card.Body>
 				</Card>

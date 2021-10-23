@@ -18,7 +18,7 @@ import {
 import Menu from "./Menu";
 
 export default function Header() {
-	const { products } = useContext(ServiceContext);
+	const { services } = useContext(ServiceContext);
 	return (
 		<header>
 			<div className={styles.top}></div>

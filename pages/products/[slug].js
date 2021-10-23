@@ -4,24 +4,24 @@ import Layout from "../../components/Layout";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Container, Row } from "react-bootstrap";
 
-function Product({ service }) {
-	console.log(service);
+function Product({ product }) {
+	console.log(product);
 	return (
 		<Layout>
 			<div className="content">
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
-						<h1 className={styles.title}>{service.title}</h1>
+						<h1 className={styles.title}>{product.title}</h1>
 						<Image
-							src={service.image}
+							src={product.image}
 							layout="fill"
 							objectFit="cover"
-							alt={service.description}
+							alt={product.description}
 						/>
 					</figure>
 					<Container>
 						<Row>
-							<p>{service.description}</p>
+							<p>{product.description}</p>
 						</Row>
 						<Row>
 							{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}
@@ -44,11 +44,11 @@ export async function getServerSideProps({ query: { slug } }) {
 			Accept: "application/json; charset=UTF-8",
 		},
 	});
-	const services = await res.json();
-	console.log(services);
+	const products = await res.json();
+	console.log(products);
 	return {
 		props: {
-			service: services[0],
+			product: products[0],
 		},
 	};
 }

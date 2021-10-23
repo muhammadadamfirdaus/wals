@@ -3,6 +3,7 @@
 const { products } = require("../products.json");
 
 export default function handler(req, res) {
-	const jasa = products.filter((s) => s.slug === req.query.slug);
-	res.status(200).json(JSON.stringify(jasa));
+	const produk = products.filter((s) => s.slug === req.query.slug);
+	console.log(produk);
+	res.status(200).json(JSON.stringify(produk));
 }
