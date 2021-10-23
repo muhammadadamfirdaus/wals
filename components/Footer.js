@@ -12,13 +12,20 @@ export default function Footer() {
 			<Container className={styles.container}>
 				<Row>
 					<Col>
-						<h2 className={styles.title}>Survey Pemetaan Wilayah</h2>
-						<p>PT WALS - Wahyudi Andy Laksito Setiyarso.</p>
+						<h2 className={styles.title}>About</h2>
+						<h4 className={styles.subtitle}>
+							PT WALS - Wahyudi Andy Laksito Setiyarso
+						</h4>
 						<p>Jasa konsultan survey dan pemetaan terbaik di Indonesia.</p>
+						<div className={styles.address}>
+							<p>Rukan Taman Pondok Kelapa, Blok F No. 6,</p>
+							<p>Pondok Kelapa, Duren Sawit,</p>
+							<p>Jakarta Timur</p>
+						</div>
 					</Col>
 					<Col>
-						<h2 className={styles.title}>Produk</h2>
-						<ul>
+						<h2 className={styles.title}>Services</h2>
+						<ul className={styles.list}>
 							{services.map((x) => {
 								// limit title by 3 words
 								let title = x.title;
@@ -27,17 +34,22 @@ export default function Footer() {
 								}
 								return (
 									<li key={x.id}>
-										<Link href={`/products/${x.slug}`}>
-											<a>{title}</a>
-										</Link>
+										<p>
+											<Link href={`/products/${x.slug}`}>
+												<a>{title}</a>
+											</Link>
+										</p>
 									</li>
 								);
 							})}
 						</ul>
 					</Col>
-					<Col>
-						<h2 className={styles.title}>Kontak</h2>
+					<Col md={2}>
+						<h2 className={styles.title}>Stay Connected</h2>
 					</Col>
+				</Row>
+				<Row className={styles.copyright}>
+					<p>Copyright &copy; 2021</p>
 				</Row>
 			</Container>
 		</div>

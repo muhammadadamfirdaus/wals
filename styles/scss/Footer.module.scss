@@ -7,15 +7,47 @@
 		padding: 4rem 0 6rem;
 	}
 	& .title,
-	& p {
-		font-size: 0.875rem;
+	& .subtitle {
+		font-size: 1rem;
 	}
 
 	& .title {
 		color: #fff;
+		margin-bottom: 1rem;
 	}
-	& p,
-	& a {
+
+	& .subtitle {
+		color: #d8d8d8;
+		font-weight: 400;
+		margin-bottom: 0.25rem;
+	}
+
+	& a,
+	& p {
 		color: #a8a8a8;
+	}
+
+	& p {
+		font-size: 0.875rem;
+		margin-bottom: 0;
+	}
+
+	& .address {
+		margin-top: 1rem;
+	}
+
+	& .list {
+		padding-left: 0;
+		& li {
+			list-style: none;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	& .copyright {
+		border-top: 0.5px solid #555;
+		margin-top: 4rem;
+		padding-top: 1rem;
+		text-align: center;
 	}
 }
