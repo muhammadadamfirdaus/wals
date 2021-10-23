@@ -24,13 +24,17 @@ export default function Menu() {
 									<Dropdown.Menu>
 										{i.menu.map((x) => (
 											<Dropdown.Item key={x.id}>
-												<Link href={`/${x.slug}`}>{x.title}</Link>
+												<Link href={`/${x.slug}`}>
+													<a>{x.title}</a>
+												</Link>
 											</Dropdown.Item>
 										))}
 									</Dropdown.Menu>
 								</Dropdown>
 							) : (
-								<Nav.Link href={`/${i.slug}`}>{i.title}</Nav.Link>
+								<Nav.Link href={`/${i.slug}`}>
+									<a>{i.title}</a>
+								</Nav.Link>
 							)}
 						</Nav.Item>
 					);

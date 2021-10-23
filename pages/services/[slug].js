@@ -5,7 +5,7 @@ import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Container, Row } from "react-bootstrap";
 
 function Service({ service }) {
-	console.log(service);
+	// console.log(service);
 	return (
 		<Layout>
 			<div className="content">
