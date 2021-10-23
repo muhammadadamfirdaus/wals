@@ -2,29 +2,48 @@ import { API_URL } from "../../config";
 import Image from "next/image";
 import Layout from "../../components/Layout";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Col, Row } from "react-bootstrap";
+
+import { useRouter } from "next/router";
 
 function Product({ product }) {
-	console.log(product);
+	const router = useRouter();
 	return (
 		<Layout>
 			<div className="content">
 				<div className="wrapper">
-					<figure className={styles.featuredImage}>
-						<h1 className={styles.title}>{product.title}</h1>
-						<Image
-							src={product.image}
-							layout="fill"
-							objectFit="cover"
-							alt={product.description}
-						/>
-					</figure>
 					<Container>
+						<Button
+							variant="secondary"
+							className="my-4"
+							onClick={() => router.back()}
+						>
+							Back
+						</Button>
 						<Row>
-							<p>{product.description}</p>
-						</Row>
-						<Row>
-							{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}
+							<Col>
+								<figure className={styles.featuredImageProduct}>
+									<Image
+										src={product.image}
+										layout="fill"
+										objectFit="cover"
+										alt={product.title}
+									/>
+								</figure>
+							</Col>
+							<Col>
+								<Row>
+									<h1 className={styles.title}>{product.title}</h1>
+								</Row>
+								<Row>
+									<div
+										dangerouslySetInnerHTML={{ __html: product.description }}
+									></div>
+								</Row>
+								<Row>
+									{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}
+								</Row>
+							</Col>
 						</Row>
 					</Container>
 				</div>

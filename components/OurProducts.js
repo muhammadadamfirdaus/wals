@@ -15,7 +15,7 @@ export default function OurProducts() {
 			description = description.substring(0, 120);
 		}
 		return (
-			<Col className="col-md-offset-4" key={product.id}>
+			<Col md={3} className="mb-4" key={product.id}>
 				<Card className={styles.card}>
 					<div className={styles.thumbnail}>
 						<Image
@@ -29,7 +29,11 @@ export default function OurProducts() {
 						<Card.Title className={styles.title}>
 							<Link href={`/products/${product.slug}`}>{product.title}</Link>
 						</Card.Title>
-						<Card.Text className={styles.description}>{description}</Card.Text>
+						<Card.Text className={styles.description}>
+							{/* <div
+								dangerouslySetInnerHTML={{ __html: product.description }}
+							></div> */}
+						</Card.Text>
 						<Button
 							variant="primary"
 							className="button align-item-center align-self-center"

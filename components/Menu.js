@@ -12,12 +12,10 @@ import {
 import menu from "../lib/menu";
 
 export default function Menu() {
-	console.log(menu);
 	return (
 		<div>
 			<Nav>
 				{menu.map((i) => {
-					console.log(i);
 					return (
 						<Nav.Item key={i.id}>
 							{i.menu ? (

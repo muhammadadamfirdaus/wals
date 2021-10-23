@@ -9,7 +9,6 @@ export default function Layout({ title, keywords, description, children }) {
 	// for unique classes page
 	// const uniqueURL = url.pathname.replace(/^\/|\/$/g, "");
 	const uniqueURL = url.pathname.split("/")[1];
-	console.log(uniqueURL);
 	const uniquePage = url.pathname === "/" ? "home" : "page " + uniqueURL;
 	return (
 		<div className={`${uniquePage}`}>

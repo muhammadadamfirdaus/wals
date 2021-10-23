@@ -11,7 +11,7 @@ export default function Catalogue() {
 			<div className="content">
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
-						<h1 className={styles.title}>Jasa PT WALS</h1>
+						<h1 className={styles.title}>Product Catalogue</h1>
 						<Image
 							src="/images/headline.jpg"
 							layout="fill"
@@ -21,9 +21,11 @@ export default function Catalogue() {
 					</figure>
 					<Container>
 						<Row>
-							<h1 className="title">Jasa PT WALS</h1>
+							<h1 className="title">Product Catalogue</h1>
 						</Row>
-						<OurProducts />
+						<Row>
+							<OurProducts />
+						</Row>
 					</Container>
 				</div>
 			</div>
