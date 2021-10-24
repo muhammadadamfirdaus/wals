@@ -1,9 +1,11 @@
 import Link from "next/link";
 import {
 	Button,
+	ButtonGroup,
 	Card,
 	Col,
 	Dropdown,
+	DropdownButton,
 	Nav,
 	NavDropdown,
 	NavItem,
@@ -12,6 +14,7 @@ import {
 import menu from "../lib/menu";
 
 export default function Menu() {
+	console.log(menu);
 	return (
 		<div>
 			<Nav>
@@ -19,14 +22,38 @@ export default function Menu() {
 					return (
 						<Nav.Item key={i.id}>
 							{i.menu ? (
-								<Dropdown as={NavItem} id="collasible-nav-dropdown">
+								<Dropdown
+									as={NavItem}
+									id="collasible-nav-dropdown"
+									autoClose="outside"
+								>
 									<Dropdown.Toggle as={NavLink}>{i.title}</Dropdown.Toggle>
 									<Dropdown.Menu>
 										{i.menu.map((x) => (
 											<Dropdown.Item key={x.id}>
-												<Link href={`/${x.slug}`}>
-													<a>{x.title}</a>
-												</Link>
+												{x.menu ? (
+													<DropdownButton
+														as={ButtonGroup}
+														key="end"
+														id="dropdown-button-drop-end"
+														drop="end"
+														title={i.title}
+													>
+														{x.menu.map((y) => (
+															<Dropdown.Item>
+																<Link href={`/${y.slug}`}>
+																	<a>{y.title}</a>
+																</Link>
+															</Dropdown.Item>
+														))}
+													</DropdownButton>
+												) : (
+													<Dropdown.Item>
+														<Link href={`/${x.slug}`}>
+															<a>{x.title}</a>
+														</Link>
+													</Dropdown.Item>
+												)}
 											</Dropdown.Item>
 										))}
 									</Dropdown.Menu>
