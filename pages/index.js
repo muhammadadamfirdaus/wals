@@ -66,9 +66,11 @@ export default function Home() {
 									<span>Proyek</span>
 								</Col>
 								<Col>
-									<div className="circle">
-										<span>80</span>
-									</div>
+									<Link href="/clients">
+										<div className="circle">
+											<span>80</span>
+										</div>
+									</Link>
 									<span>Klien</span>
 								</Col>
 								<Col>
