@@ -40,7 +40,7 @@ export default function Menu() {
 														title={i.title}
 													>
 														{x.menu.map((y) => (
-															<Dropdown.Item>
+															<Dropdown.Item key={y.id}>
 																<Link href={`/${y.slug}`}>
 																	<a>{y.title}</a>
 																</Link>
