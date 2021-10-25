@@ -23,6 +23,38 @@
 			"category": "catalogue",
 			"description": "Pemetaan Wilayah adalah tahap ketiga dalam konsep pembagian administrasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et libero tempus, pellentesque eros et, tristique dui. Nullam a nisi vel nunc venenatis feugiat. Mauris non leo auctor, pharetra ante id, aliquet erat. Morbi non lobortis tortor, sit amet maximus quam. Phasellus nisi leo, luctus quis rutrum efficitur, varius eu nunc. Cras bibendum sem quam, ac imperdiet enim dignissim ut. Morbi venenatis metus vitae orci auctor consequat. Vivamus lobortis sit amet velit nec imperdiet. Fusce et maximus diam. Nam euismod imperdiet sem in fringilla. Sed gravida lectus turpis, eget efficitur justo luctus in. Vivamus vel metus ac dui aliquet laoreet quis vitae tellus. Curabitur venenatis est sem, vitae ornare metus sollicitudin non.",
 			"image": "/images/3.jpg"
+		},
+		{
+			"id": 4,
+			"title": "Jasa Survey Topografi",
+			"slug": "jasa-survey-topografi",
+			"category": "survey",
+			"description": "<p>Di era perkembangan zaman yang begitu cepat, khususnya di bidang Infrastruktur, dan Ekplorasi Sumber Daya Alam, Perencanaan Lingkungan dan Pembangunan suatu wilayah. Peran Survey Topografi sangat penting sebagai informasi awal sebuah pekerjaan</p><p>Survey Topografi dilakukan untuk mengetahui sebuah data/informasi baik secara dua dimensi maupun tiga dimensi, baik yang terjadi secara alami atau buatan manusia diatas permukaan bumi, sebagai informasi pendukung yang di gunakan sebagai data awal maupun untuk keperluan monitoring sebuah perencanaan teknis dalam pembangunan dan pengembangan suatu wilayah sebagai contoh di bidang Rekayasa Engineering, Pertambangan, Perkebunan, Penggembangan Kawasan Pemukiman.</p><p>Kami selaku PT. Wahyudi Andy Laksito Setiarso(WALS) yang bergerak di bidang Jasa Survey dan Pemetaan yang berdiri sejak tahun 1993 siap menjadi partner dalam mendukung pekerjaan anda.</p>",
+			"image": "/images/services/jasa-survey-topografi-featured.jpg"
+		},
+		{
+			"id": 5,
+			"title": "Jasa Survey Kadastral",
+			"slug": "jasa-survey-kadastral",
+			"category": "survey",
+			"description": "<p>Jasa Survey Kadastral atau Pemetaan kadaster adalah pemetaan dalam rangka proses pendaftaran Bidang Tanah. Dalam pengertian yang spesifik merupakan kegiatan menggambarkan hasil pengukuran bidang tanah secara sistematik maupun sporadik yang dimiliki oleh Pemerintah maupun perorangan.</p><p>Pada dasarnya hasil pemetaan ini sudah tertentu sebagaimana kebutuhan Badan Pertanahan Nasional Republik Indonesia seperti Peta Dasar Teknik, Peta Dasar Pendaftaran, Peta Bidang Tanah dan Peta Pendaftaran.</p><p>Kami selaku PT. Wahyudi Andy Laksito Setiarso(WALS) yang bergerak di bidang Jasa Survey dan Pemetaan yang berdiri sejak tahun 1993 siap menjadi partner dalam mendukung pekerjaan anda.</p>",
+			"image": "/images/services/jasa-survey-kadastral-featured.jpg"
+		},
+		{
+			"id": 6,
+			"title": "Jasa Survey Bathimetri",
+			"slug": "jasa-survey-bathimetri",
+			"category": "survey",
+			"description": "<p>Indonesia merupakan Negara dengan banyak Kepulauannya, yang membuat Indonesia menjadi negara yang strategis di wilayah Perairan dengan banyaknya perkembangan pembangunan infrastruktir demi menunjang potensi-potensi yang berada di wilayah pesisir perairan Indonesia. dengan adanya Jasa Survey bathimetri ini dapat memberikan data dan atau informasi mengenai topografi bawah air, sebagai data dan atau informasi pendukung dalam perencanaan ataupun monitoring yang terkait dengan pengembangan dan pembangunan wilayah pesisir.</p>",
+			"image": "/images/services/jasa-survey-bathimetri-featured.jpg"
+		},
+		{
+			"id": 7,
+			"title": "Jasa Survey UAV Drone",
+			"slug": "jasa-survey-uav-drone",
+			"category": "survey",
+			"description": "<p>Semakin berkembang pesatnya pembangunan infrastruktur dan industri di Indonesia yang membuat kebutuhan akan informasi udara dari suatu wilayah untuk melakukan perencanaan maupun monitoring dengan adanya Survey UAV/Drone informasi yang disajikan bisa dengan cepat dan akurat.</p><p>Beberapa Fungsi Survey UAV/DRONE dalam dunia industri diantaranya bisa merencanakan suatu wilayah dengan menganalisa vegetasi, topografi, pemodelan rupa bumi tiga dimensi untuk mengetahui potensi suatu wilayah dari foto udara. Memantau dan inspeksi Wilayah dimana suatu wilayah atau area yang tersebut sulit untuk dijangkau. memonitoring aset suat wilayah dengan menggunakan Analisa dari hasil foto udara.</p>",
+			"image": "/images/services/jasa-survey-drone-featured.jpg"
 		}
 	]
 }

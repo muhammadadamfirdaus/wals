@@ -16,12 +16,14 @@ function Service({ service }) {
 							src={service.image}
 							layout="fill"
 							objectFit="cover"
-							alt={service.description}
+							alt={service.title}
 						/>
 					</figure>
 					<Container>
 						<Row>
-							<p>{service.description}</p>
+							<div
+								dangerouslySetInnerHTML={{ __html: service.description }}
+							></div>
 						</Row>
 						<Row>
 							{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}

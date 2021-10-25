@@ -8,37 +8,43 @@ import styles from "../styles/scss/Card.module.scss";
 
 export default function OurServices() {
 	const { services } = useContext(ServiceContext);
-	return services.map((service) => {
-		// limit description
-		let description = service.description;
-		if (description.length > 120) {
-			description = description.substring(0, 120);
-		}
-		return (
-			<Col className="col-md-offset-4" key={service.id}>
-				<Card className={styles.card}>
-					<div className={styles.thumbnail}>
-						<Image
-							src={service.image}
-							layout="fill"
-							objectFit="cover"
-							alt={service.description}
-						/>
-					</div>
-					<Card.Body className="d-flex flex-column">
-						<Card.Title className={styles.title}>
-							<Link href={`/services/${service.slug}`}>{service.title}</Link>
-						</Card.Title>
-						<Card.Text className={styles.description}>{description}</Card.Text>
-						<Button
-							variant="primary"
-							className="button align-item-center align-self-center"
-						>
-							<Link href={`/services/${service.slug}`}>Selengkapnya</Link>
-						</Button>
-					</Card.Body>
-				</Card>
-			</Col>
-		);
-	});
+	return services
+		.filter((service) => service.category === "survey")
+		.slice(0, 3)
+		.map((service) => {
+			// limit description
+			let description = service.description;
+			if (description.length > 120) {
+				description = description.substring(0, 120);
+			}
+			return (
+				<Col className="col-md-offset-4" key={service.id}>
+					<Card className={styles.card}>
+						<div className={styles.thumbnail}>
+							<Image
+								src={service.image}
+								layout="fill"
+								objectFit="cover"
+								alt={service.description}
+							/>
+						</div>
+						<Card.Body className="d-flex flex-column">
+							<Card.Title className={styles.title}>
+								<Link href={`/services/${service.slug}`}>{service.title}</Link>
+							</Card.Title>
+							<Card.Text
+								className={styles.description}
+								dangerouslySetInnerHTML={{ __html: description }}
+							></Card.Text>
+							<Button
+								variant="primary"
+								className="button align-item-center align-self-center"
+							>
+								<Link href={`/services/${service.slug}`}>Selengkapnya</Link>
+							</Button>
+						</Card.Body>
+					</Card>
+				</Col>
+			);
+		});
 }

@@ -59,9 +59,11 @@ export default function Menu() {
 									</Dropdown.Menu>
 								</Dropdown>
 							) : (
-								<Nav.Link href={`/${i.slug}`}>
-									<a>{i.title}</a>
-								</Nav.Link>
+								<Link href={`/${i.slug}`} passHref>
+									<Nav.Link>
+										<a>{i.title}</a>
+									</Nav.Link>
+								</Link>
 							)}
 						</Nav.Item>
 					);
