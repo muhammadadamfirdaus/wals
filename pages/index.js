@@ -160,22 +160,22 @@ export default function Home() {
 							</Row>
 							<Row className="specialist">
 								<Col md="6" className="mb-4">
-									<div class="member">
+									<div className="member">
 										<h3>Tenaga Ahli Bidang Geoit</h3>
 									</div>
 								</Col>
 								<Col md="6" className="mb-4">
-									<div class="member">
+									<div className="member">
 										<h3>Tenaga Ahli Bidang Sipil</h3>
 									</div>
 								</Col>
 								<Col md="6" className="mb-4">
-									<div class="member">
+									<div className="member">
 										<h3>Tenaga Ahli Bidang GIS</h3>
 									</div>
 								</Col>
 								<Col md="6" className="mb-4">
-									<div class="member">
+									<div className="member">
 										<h3>Tenaga Ahli Bidang Lingkungan</h3>
 									</div>
 								</Col>
