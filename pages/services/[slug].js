@@ -3,6 +3,7 @@ import Image from "next/image";
 import Layout from "../../components/Layout";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Container, Row } from "react-bootstrap";
+import OurServices from "../../components/OurServices";
 
 function Service({ service }) {
 	// console.log(service);
@@ -26,7 +27,8 @@ function Service({ service }) {
 							></div>
 						</Row>
 						<Row>
-							{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}
+							<h1 className="title">Lihat Juga Jasa Lainnya</h1>
+							<OurServices />
 						</Row>
 					</Container>
 				</div>

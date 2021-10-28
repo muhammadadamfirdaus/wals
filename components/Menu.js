@@ -14,7 +14,7 @@ import {
 import menu from "../lib/menu";
 
 export default function Menu() {
-	console.log(menu);
+	// console.log(menu);
 	return (
 		<div>
 			<Nav>

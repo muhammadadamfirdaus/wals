@@ -89,6 +89,16 @@ export default function Home() {
 							</Row>
 							<Row>
 								<Col>
+									<figure>
+										<Image
+											src="/images/4.jpg"
+											layout="fill"
+											objectFit="cover"
+											alt="Tentang PT WALS."
+										/>
+									</figure>
+								</Col>
+								<Col>
 									<h4 className="subheading">Berpengalaman Selama 27 Tahun</h4>
 									<p>
 										PT WALS. (Wahyudi Andy Laksito Setiarso) adalah sebuah
@@ -111,16 +121,6 @@ export default function Home() {
 										<Link href={`/contacts`}>Hubungi Kami</Link>
 									</Button>
 								</Col>
-								<Col>
-									<figure>
-										<Image
-											src="/images/4.jpg"
-											layout="fill"
-											objectFit="cover"
-											alt="Tentang PT WALS."
-										/>
-									</figure>
-								</Col>
 							</Row>
 						</Container>
 					</div>
@@ -139,6 +139,8 @@ export default function Home() {
 											alt="Tim PT WALS."
 										/>
 									</figure>
+									<h3>Ir. Wahyudi Purnomo</h3>
+									<h5>Direksi</h5>
 								</Col>
 								<Col>
 									<figure>
@@ -149,56 +151,38 @@ export default function Home() {
 											alt="Tim PT WALS."
 										/>
 									</figure>
+									<h3>Ir. Laksito Pararto</h3>
+									<h5>Direksi</h5>
 								</Col>
 							</Row>
 							<Row>
 								<h5 className="title text-center">Tenaga Ahli</h5>
 							</Row>
 							<Row className="specialist">
-								<Col md="3">
-									<figure>
-										<Image
-											src="/images/5.jpg"
-											layout="fill"
-											objectFit="cover"
-											alt="Tim PT WALS."
-										/>
-									</figure>
+								<Col md="6" className="mb-4">
+									<div class="member">
+										<h3>Tenaga Ahli Bidang Geoit</h3>
+									</div>
 								</Col>
-								<Col md="3">
-									<figure>
-										<Image
-											src="/images/5.jpg"
-											layout="fill"
-											objectFit="cover"
-											alt="Tim PT WALS."
-										/>
-									</figure>
+								<Col md="6" className="mb-4">
+									<div class="member">
+										<h3>Tenaga Ahli Bidang Sipil</h3>
+									</div>
 								</Col>
-								<Col md="3">
-									<figure>
-										<Image
-											src="/images/5.jpg"
-											layout="fill"
-											objectFit="cover"
-											alt="Tim PT WALS."
-										/>
-									</figure>
+								<Col md="6" className="mb-4">
+									<div class="member">
+										<h3>Tenaga Ahli Bidang GIS</h3>
+									</div>
 								</Col>
-								<Col md="3">
-									<figure>
-										<Image
-											src="/images/5.jpg"
-											layout="fill"
-											objectFit="cover"
-											alt="Tim PT WALS."
-										/>
-									</figure>
+								<Col md="6" className="mb-4">
+									<div class="member">
+										<h3>Tenaga Ahli Bidang Lingkungan</h3>
+									</div>
 								</Col>
 							</Row>
 						</Container>
 					</div>
-					<div className="blog">
+					{/* <div className="blog">
 						<Container className="py-5">
 							<Row>
 								<h3 className="title text-center">Blog</h3>
@@ -233,7 +217,7 @@ export default function Home() {
 								</Col>
 							</Row>
 						</Container>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Layout>
