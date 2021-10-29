@@ -24,7 +24,7 @@ function Product({ product }) {
 							<Col>
 								<figure className={styles.featuredImageProduct}>
 									<Image
-										src={product.image}
+										src={product.image_featured.url}
 										layout="fill"
 										objectFit="cover"
 										alt={product.title}
@@ -55,7 +55,7 @@ function Product({ product }) {
 export default Product;
 
 export async function getServerSideProps({ query: { slug } }) {
-	const res = await fetch(`${API_URL}/api/products/${slug}`, {
+	const res = await fetch(`${API_URL}/products?slug=${slug}`, {
 		headers: {
 			// update with your user-agent
 			"User-Agent":

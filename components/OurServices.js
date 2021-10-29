@@ -17,34 +17,35 @@ export default function OurServices() {
 			if (description.length > 120) {
 				description = description.substring(0, 120);
 			}
-			return (
-				<Col className="col-md-offset-4" key={service.id}>
-					<Card className={styles.card}>
-						<div className={styles.thumbnail}>
-							<Image
-								src={service.image}
-								layout="fill"
-								objectFit="cover"
-								alt={service.description}
-							/>
-						</div>
-						<Card.Body className="d-flex flex-column">
-							<Card.Title className={styles.title}>
-								<Link href={`/services/${service.slug}`}>{service.title}</Link>
-							</Card.Title>
-							<Card.Text
-								className={styles.description}
-								dangerouslySetInnerHTML={{ __html: description }}
-							></Card.Text>
-							<Button
-								variant="primary"
-								className="button align-item-center align-self-center"
-							>
-								<Link href={`/services/${service.slug}`}>Selengkapnya</Link>
-							</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-			);
+			console.log(service.image_featured.url);
+			// return (
+			// 	<Col className="col-md-offset-4" key={service.id}>
+			// 		<Card className={styles.card}>
+			// 			<div className={styles.thumbnail}>
+			// 				<Image
+			// 					src={service.image_featured.url}
+			// 					layout="fill"
+			// 					objectFit="cover"
+			// 					alt={service.description}
+			// 				/>
+			// 			</div>
+			// 			<Card.Body className="d-flex flex-column">
+			// 				<Card.Title className={styles.title}>
+			// 					<Link href={`/services/${service.slug}`}>{service.title}</Link>
+			// 				</Card.Title>
+			// 				<Card.Text
+			// 					className={styles.description}
+			// 					dangerouslySetInnerHTML={{ __html: description }}
+			// 				></Card.Text>
+			// 				<Button
+			// 					variant="primary"
+			// 					className="button align-item-center align-self-center"
+			// 				>
+			// 					<Link href={`/services/${service.slug}`}>Selengkapnya</Link>
+			// 				</Button>
+			// 			</Card.Body>
+			// 		</Card>
+			// 	</Col>
+			// );
 		});
 }

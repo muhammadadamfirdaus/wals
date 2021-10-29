@@ -19,7 +19,7 @@ export default function OurProducts() {
 				<Card className={styles.card}>
 					<div className={styles.thumbnail}>
 						<Image
-							src={product.image}
+							src={product.image_featured.url}
 							layout="fill"
 							objectFit="cover"
 							alt={product.description}

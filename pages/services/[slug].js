@@ -13,12 +13,12 @@ function Service({ service }) {
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
 						<h1 className={styles.title}>{service.title}</h1>
-						<Image
+						{/* <Image
 							src={service.image}
 							layout="fill"
 							objectFit="cover"
 							alt={service.title}
-						/>
+						/> */}
 					</figure>
 					<Container>
 						<Row>
@@ -40,7 +40,7 @@ function Service({ service }) {
 export default Service;
 
 export async function getServerSideProps({ query: { slug } }) {
-	const res = await fetch(`${API_URL}/api/services/${slug}`, {
+	const res = await fetch(`${API_URL}/services?slug=${slug}`, {
 		headers: {
 			// update with your user-agent
 			"User-Agent":

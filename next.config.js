@@ -8,4 +8,7 @@ module.exports = {
 	experimental: {
 		scrollRestoration: true,
 	},
+	images: {
+		domains: ["res.cloudinary.com"],
+	},
 };
