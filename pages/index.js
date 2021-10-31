@@ -40,7 +40,7 @@ export default function Home() {
 						<div className="swiper-button-prev swiper-button-white"></div>
 						{services.map((slide) => (
 							<SwiperSlide key={slide.id}>
-								<Hero service={slide} />
+								{/* <Hero service={slide} /> */}
 							</SwiperSlide>
 						))}
 					</Swiper>

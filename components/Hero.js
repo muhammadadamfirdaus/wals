@@ -13,7 +13,7 @@ export default function Hero({ service }) {
 		<div className="content">
 			<div className="wrapper">
 				<figure>
-					{/* <Image src={service.image} layout="fill" alt="" /> */}
+					<Image src={service.image_featured.url} layout="fill" alt="" />
 				</figure>
 				<div className="caption md-3">
 					<h1 className="title">{service.title}</h1>

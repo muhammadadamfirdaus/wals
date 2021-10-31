@@ -13,12 +13,12 @@ function Service({ service }) {
 				<div className="wrapper">
 					<figure className={styles.featuredImage}>
 						<h1 className={styles.title}>{service.title}</h1>
-						{/* <Image
-							src={service.image}
+						<Image
+							src={service.image_featured.url}
 							layout="fill"
 							objectFit="cover"
 							alt={service.title}
-						/> */}
+						/>
 					</figure>
 					<Container>
 						<Row>
