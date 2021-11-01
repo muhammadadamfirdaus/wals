@@ -8,13 +8,14 @@ import OurServices from "../components/OurServices";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { API_URL } from "../config";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-export default function Home() {
+export default function Home({ sliders }) {
 	const { services } = useContext(ServiceContext);
 	// console.log(services);
 	return (
@@ -38,9 +39,9 @@ export default function Home() {
 					>
 						<div className="swiper-button-next swiper-button-white"></div>
 						<div className="swiper-button-prev swiper-button-white"></div>
-						{services.map((slide) => (
+						{sliders.map((slide) => (
 							<SwiperSlide key={slide.id}>
-								{/* <Hero service={slide} /> */}
+								<Hero slides={slide} />
 							</SwiperSlide>
 						))}
 					</Swiper>
@@ -222,4 +223,22 @@ export default function Home() {
 			</div>
 		</Layout>
 	);
+}
+
+export async function getServerSideProps() {
+	const res = await fetch(`${API_URL}/sliders`, {
+		headers: {
+			// update with your user-agent
+			"User-Agent":
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+			Accept: "application/json; charset=UTF-8",
+		},
+	});
+	const sliders = await res.json();
+	console.log(sliders);
+	return {
+		props: {
+			sliders,
+		},
+	};
 }
