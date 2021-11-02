@@ -2,8 +2,9 @@ import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 import Layout from "../../components/Layout";
+import { API_URL } from "../../config";
 
-export default function Clients() {
+export default function Clients({ clients }) {
 	return (
 		<Layout title="Klien PT WALS.">
 			<div className="content">
@@ -22,26 +23,38 @@ export default function Clients() {
 							<h1 className="title">Berbagai Mitra Kami</h1>
 						</Row>
 						<Row>
-							<Col md={3}>
-								<Image
-									src="/images/clients/bek.jpg"
-									width="200"
-									height="100"
-									alt="BEK Logo."
-								/>
-							</Col>
-							<Col md={3}>
-								<Image
-									src="/images/clients/big.jpg"
-									width="88"
-									height="100"
-									alt="BEK Logo."
-								/>
-							</Col>
+							{clients.map((client) => (
+								<Col md={3} key={client.id}>
+									<Image
+										src={client.image_featured.url}
+										width="200"
+										height="100"
+										alt={`"${client.title} Logo."`}
+									/>
+								</Col>
+							))}
 						</Row>
 					</Container>
 				</div>
 			</div>
 		</Layout>
 	);
+}
+
+export async function getStaticProps() {
+	const res = await fetch(`${API_URL}/clients`, {
+		headers: {
+			// update with your user-agent
+			"User-Agent":
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+			Accept: "application/json; charset=UTF-8",
+		},
+	});
+	const clients = await res.json();
+	console.log(clients);
+	return {
+		props: {
+			clients,
+		},
+	};
 }

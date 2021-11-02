@@ -3,6 +3,7 @@ import ServiceContext from "../context/ServiceContext";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Card, Col } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 
 import styles from "../styles/scss/Card.module.scss";
 
@@ -34,8 +35,10 @@ export default function OurServices() {
 						</Card.Title>
 						<Card.Text
 							className={styles.description}
-							dangerouslySetInnerHTML={{ __html: description }}
-						></Card.Text>
+							// dangerouslySetInnerHTML={{ __html: description }}
+						>
+							<ReactMarkdown source={description}></ReactMarkdown>
+						</Card.Text>
 						<Button
 							variant="primary"
 							className="button align-item-center align-self-center"
