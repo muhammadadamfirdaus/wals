@@ -59,25 +59,27 @@ export default function Home({ sliders }) {
 						<Container className="py-5">
 							<Row>
 								<Col>
-									<Link href={`/products`}>
+									<Link href={`/projects`}>
 										<div className="circle">
-											<span>270</span>
+											<span>264</span>
 										</div>
 									</Link>
 									<span>Proyek</span>
 								</Col>
 								<Col>
-									<Link href="/clients">
+									<Link href={`/clients`}>
 										<div className="circle">
-											<span>80</span>
+											<span>79</span>
 										</div>
 									</Link>
 									<span>Klien</span>
 								</Col>
 								<Col>
-									<div className="circle">
-										<span>176</span>
-									</div>
+									<Link href={`/catalogue`}>
+										<div className="circle">
+											<span>49</span>
+										</div>
+									</Link>
 									<span>Penjualan</span>
 								</Col>
 							</Row>
