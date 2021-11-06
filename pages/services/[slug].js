@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Container, Row } from "react-bootstrap";
 import OurServices from "../../components/OurServices";
+import ReactMarkdown from "react-markdown";
 
 function Service({ service }) {
 	// console.log(service);
@@ -22,9 +23,7 @@ function Service({ service }) {
 					</figure>
 					<Container>
 						<Row>
-							<div
-								dangerouslySetInnerHTML={{ __html: service.description }}
-							></div>
+							<ReactMarkdown children={service.description}></ReactMarkdown>
 						</Row>
 						<Row>
 							<h1 className="title">Lihat Juga Jasa Lainnya</h1>
