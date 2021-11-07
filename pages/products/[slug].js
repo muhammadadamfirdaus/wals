@@ -5,6 +5,7 @@ import styles from "../../styles/scss/FeaturedImage.module.scss";
 import { Button, Container, Col, Row } from "react-bootstrap";
 
 import { useRouter } from "next/router";
+import ReactMarkdown from "react-markdown";
 
 function Product({ product }) {
 	const router = useRouter();
@@ -36,9 +37,7 @@ function Product({ product }) {
 									<h1 className={styles.title}>{product.title}</h1>
 								</Row>
 								<Row>
-									<div
-										dangerouslySetInnerHTML={{ __html: product.description }}
-									></div>
+									<ReactMarkdown children={product.description}></ReactMarkdown>
 								</Row>
 								<Row>
 									{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}
