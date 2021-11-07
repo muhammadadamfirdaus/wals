@@ -37,7 +37,7 @@ export default function OurServices() {
 							className={styles.description}
 							// dangerouslySetInnerHTML={{ __html: description }}
 						>
-							<ReactMarkdown children={description}></ReactMarkdown>
+							<ReactMarkdown>{description}</ReactMarkdown>
 						</Card.Text>
 						<Button
 							variant="primary"

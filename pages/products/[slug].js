@@ -37,7 +37,7 @@ function Product({ product }) {
 									<h1 className={styles.title}>{product.title}</h1>
 								</Row>
 								<Row>
-									<ReactMarkdown children={product.description}></ReactMarkdown>
+									<ReactMarkdown>{product.description}</ReactMarkdown>
 								</Row>
 								<Row>
 									{/* <h1 className="title">Lihat Juga Jasa Lainnya</h1> */}

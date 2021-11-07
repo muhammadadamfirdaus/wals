@@ -23,7 +23,7 @@ function Service({ service }) {
 					</figure>
 					<Container>
 						<Row>
-							<ReactMarkdown children={service.description}></ReactMarkdown>
+							<ReactMarkdown>{service.description}</ReactMarkdown>
 						</Row>
 						<Row>
 							<h1 className="title">Lihat Juga Jasa Lainnya</h1>
