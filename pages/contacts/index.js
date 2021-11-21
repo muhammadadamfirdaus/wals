@@ -4,6 +4,7 @@ import styles from "../../styles/scss/FeaturedImage.module.scss";
 import Layout from "../../components/Layout";
 import GoogleMapReact from "google-map-react";
 import Location from "../../components/Location";
+import google_maps_url from "../../lib/maps";
 
 export default function Contact() {
   const location = {
@@ -37,9 +38,7 @@ export default function Contact() {
                 style={{ height: "500px", width: "100%" }}
               >
                 <GoogleMapReact
-                  bootstrapURLKeys={{
-                    key: "AIzaSyARIaYFNWcYSTf1UBptR8cN6t5c-k88eFA",
-                  }}
+                  googleMapURL={google_maps_url}
                   defaultCenter={location}
                   defaultZoom={17}
                 >
