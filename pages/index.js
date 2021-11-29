@@ -240,7 +240,7 @@ export async function getServerSideProps({ locale }) {
     },
   });
   const sliders = await res.json();
-  console.log(sliders);
+  console.log(sliders, locale);
   return {
     props: {
       sliders,
