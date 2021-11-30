@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   Button,
   ButtonGroup,
@@ -12,7 +13,6 @@ import {
   NavLink,
 } from "react-bootstrap";
 import menu from "../lib/menu";
-import { useRouter } from "next/router";
 
 export default function Menu() {
   // console.log(menu);
@@ -43,11 +43,7 @@ export default function Menu() {
                           >
                             {x.menu.map((y) => (
                               <Dropdown.Item key={y.id}>
-                                <Link
-                                  href={`/${router.locale}/${y.slug}`}
-                                  passHref
-                                  locale={false}
-                                >
+                                <Link href={`/${router.locale}/${y.slug}`}>
                                   <a>{y.title}</a>
                                 </Link>
                               </Dropdown.Item>
@@ -55,11 +51,7 @@ export default function Menu() {
                           </DropdownButton>
                         ) : (
                           <Dropdown.Item>
-                            <Link
-                              href={`/${router.locale}/${x.slug}`}
-                              passHref
-                              locale={false}
-                            >
+                            <Link href={`/${router.locale}/${x.slug}`}>
                               <a>{x.title}</a>
                             </Link>
                           </Dropdown.Item>
@@ -69,11 +61,7 @@ export default function Menu() {
                   </Dropdown.Menu>
                 </Dropdown>
               ) : (
-                <Link
-                  href={`/${router.locale}/${i.slug}`}
-                  passHref
-                  locale={false}
-                >
+                <Link href={`/${router.locale}/${i.slug}`} passHref>
                   <Nav.Link>
                     <a>{i.title}</a>
                   </Nav.Link>

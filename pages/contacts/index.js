@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 import { Container, Row } from "react-bootstrap";
 import styles from "../../styles/scss/FeaturedImage.module.scss";
 import Layout from "../../components/Layout";
@@ -14,7 +16,7 @@ export default function Contact() {
   };
 
   const LocationPin = ({ text }) => <div>{text}</div>;
-
+  const { t } = useTranslation("common");
   return (
     <Layout title="Hubungi Kami">
       <div className="content">
@@ -69,3 +71,8 @@ export default function Contact() {
     </Layout>
   );
 }
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ["common"]),
+  },
+});

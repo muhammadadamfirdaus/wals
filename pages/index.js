@@ -231,7 +231,7 @@ export default function Home({ sliders }) {
 }
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch(`${API_URL}/sliders`, {
+  const res = await fetch(`${API_URL}/sliders?_locale=${locale}`, {
     headers: {
       // update with your user-agent
       "User-Agent":
@@ -240,7 +240,7 @@ export async function getServerSideProps({ locale }) {
     },
   });
   const sliders = await res.json();
-  console.log(sliders, locale);
+  console.log(locale);
   return {
     props: {
       sliders,
