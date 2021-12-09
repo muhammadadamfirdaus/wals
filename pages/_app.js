@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps, services, products }) {
 }
 
 // jasa kami
-MyApp.getInitialProps = async () => {
-  const resProducts = await fetch(`${API_URL}/products`, {
+MyApp.getInitialProps = async ({ locale }) => {
+  const resProducts = await fetch(`${API_URL}/products?_locale=${locale}`, {
     headers: {
       // update with your user-agent
       "User-Agent":
@@ -27,7 +27,7 @@ MyApp.getInitialProps = async () => {
       Accept: "application/json; charset=UTF-8",
     },
   });
-  const resServices = await fetch(`${API_URL}/services`, {
+  const resServices = await fetch(`${API_URL}/services?_locale=${locale}`, {
     headers: {
       // update with your user-agent
       "User-Agent":
