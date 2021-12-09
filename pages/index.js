@@ -244,7 +244,7 @@ export async function getServerSideProps({ locale }) {
   return {
     props: {
       sliders,
-      ...(await serverSideTranslations(locale, ["common", "footer"])),
+      ...await serverSideTranslations(locale, ["common", "footer"]),
     },
   };
 }
