@@ -1,22 +1,28 @@
 @import "../scss/theme";
 
 .top {
-	/* height: 40px; */
-	background-color: #000;
+  /* height: 40px; */
+  background-color: #000;
 }
 
 .middle > * {
-	justify-content: space-between;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .bottom {
-	background: $color1;
+  background: $color1;
 }
 
 .middle img {
-	width: 25%;
+  width: 25%;
+  @media (max-width: 768px) {
+  }
 }
 
 .contact {
-	align-items: center;
+  align-items: center;
 }

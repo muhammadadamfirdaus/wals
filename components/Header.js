@@ -26,7 +26,7 @@ export default function Header() {
     <header>
       <div className={styles.top}></div>
       <Container fluid="xl" className={styles.middle}>
-        <Row>
+        <Row className="pb-1">
           <Col className="logo">
             <Link href="/about">
               <a>
@@ -34,14 +34,12 @@ export default function Header() {
               </a>
             </Link>
           </Col>
-          <Col className="d-flex align-items-center justify-content-end">
-            <div className="w-60">
-              <div className="px-5">
-                <span>Survey &amp; Engineering Services</span>
-              </div>
+          <Col className="d-flex align-items-center">
+            <div className="col description mr-auto">
+              <span>Survey &amp; Engineering Services</span>
             </div>
-            <div className="w-20">
-              <div className="px-2">
+            <div className="row language">
+              <div className="col flag">
                 <Link
                   href={`/${router.locale === "en" ? "en" : "en"}`}
                   locale={false}
@@ -59,9 +57,7 @@ export default function Header() {
                   </a>
                 </Link>
               </div>
-            </div>
-            <div className="w-20">
-              <div className="px-2">
+              <div className="col flag">
                 <Link
                   href={`/${router.locale === "id" ? "id" : "id"}`}
                   locale={false}

@@ -130,7 +130,7 @@ export default function Home({ sliders }) {
               </Row>
             </Container>
           </div>
-          <div className="team">
+          {/* <div className="team">
             <Container className="py-5">
               <Row>
                 <h3 className="title text-center">Meet the Team</h3>
@@ -187,7 +187,7 @@ export default function Home({ sliders }) {
                 </Col>
               </Row>
             </Container>
-          </div>
+          </div> */}
           {/* <div className="blog">
 						<Container className="py-5">
 							<Row>
@@ -244,7 +244,7 @@ export async function getServerSideProps({ locale }) {
   return {
     props: {
       sliders,
-      ...await serverSideTranslations(locale, ["common", "footer"]),
+      ...(await serverSideTranslations(locale, ["common", "footer"])),
     },
   };
 }
